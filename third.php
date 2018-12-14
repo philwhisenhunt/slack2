@@ -16,19 +16,7 @@
 
 
     <script>
-        $(document).on('click', '#idOfButton', function(e){
-
-            var nameOfVariable = $('#idOfMessage').val();
-                $.ajax({
-                url: "fileName.php",
-                type: "POST",
-                data: "chatMessage=" + arb.
-                success: function (response){
-                console.log(response)
-                }
-            }
-            });
-        });
+      
     </script>
 
     </body>
