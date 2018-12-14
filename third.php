@@ -16,20 +16,17 @@
 
 
     <script>
-      $(document).on('click', '#nameOfButton', function(e){
-        var varName = $('#nameOfMessage').val();
-            $.ajax({
-                url: "get.php",
+        $(document).on('click', '#nameOfButton', function(e){
+            var nameOfVar = $('#nameOfMessage').val();
+                $.ajax({
+                url: 'get.php',
                 type: "POST",
-                data: "#chatMessage=" + varName,
-                success: function (response){
-                    console.log(response)
+                data: "chatMessage=" + nameOfVar,
+                success: function(response){
+                console.log(response)
                 }
-
             });
-            e.preventDefault();
-            
-      });
+        });
 
 
     </script>

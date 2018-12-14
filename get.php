@@ -8,6 +8,6 @@ function reverseIt($inputString){
     return strrev($inputString);
 }
 
- echo reverseIt($inputString) 
+ echo reverseIt($inputString);
  
  ?>
