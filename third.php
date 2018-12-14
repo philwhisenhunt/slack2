@@ -16,7 +16,18 @@
 
 
     <script>
-      
+      $(document).on('click', '#nameOfButton', function(e){
+        var varName = $('#nameOfMessage').val();
+            $.ajax({
+                url: "get.php",
+                type: "POST",
+                data: "#chatMessage=" + varName,
+
+            })
+
+      })
+
+
     </script>
 
     </body>
