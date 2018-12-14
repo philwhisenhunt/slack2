@@ -22,10 +22,14 @@
                 url: "get.php",
                 type: "POST",
                 data: "#chatMessage=" + varName,
+                success: function (response){
+                    console.log(response)
+                }
 
-            })
-
-      })
+            });
+            e.preventDefault();
+            
+      });
 
 
     </script>
