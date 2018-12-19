@@ -17,7 +17,7 @@
 
                     success: function(response) {
                         console.log(response + " is the pasted text");
-                        $("#displayedText").text(response);                       
+                        $("#displayedText").html(response);                       
 
                     }
                 });
@@ -38,19 +38,11 @@
 
         <h3>Don't like what you see? Click any of the words below to remove them</h3>
             
-               <span>
+      
                 <p id="displayedText">
-                    <?php
-                    $arrayOfWords = [];
-                    print_r($arrayOfWords);
-                    if(count($arrayOfWords) > 0){
-                        foreach($arrayOfWords as $word){
-                            echo("<span>" . $word . "</span>");
-                        }
-                    }
-                    ?>
+                 
                  </p>
-                </span> 
+         
        
 
 
