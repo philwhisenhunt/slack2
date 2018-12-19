@@ -23,16 +23,16 @@
             $(document).on('click', "#daButton", function(e) {
                 var theVar = $('#thePastedStuff').val();
                 $.ajax({
-                    url: "get.php",
+                    url: "paragrapher.php",
                     type: "POST",
                     data: "chatMessage=" +theVar,
 
                     success: function(response) {
                         console.log(response + " is the pasted text");
-                        $("#dis")
+                        $("#displayedText").text(response);
                     }
-                })
-            })
+                });
+            });
 
             $(document).ready(function(){
                 $("span").click(function(){
@@ -46,17 +46,20 @@
         <button type = "submit" id="daButton">Let's go</button>
 
         <h3>Don't like what you see? Click any of the words below to remove them</h3>
+            
+                <p id="#displayedText"></p>
+                <?php
+                    $paragraph = "Text goes here. It can be as long as needed.";
+                    $splitIntoWords = explode(" ", $paragraph);
+                    // print_r($splitIntoWords);
 
-        <?php
-            $paragraph = "Text goes here. It can be as long as needed.";
-            $splitIntoWords = explode(" ", $paragraph);
-            // print_r($splitIntoWords);
+                    $myArray = ['word', 'dance', 'play'];
 
-            $myArray = ['word', 'dance', 'play'];
+                    foreach ($splitIntoWords as $entry){
+                        echo "<span> $entry" . " " . "</span>";
+                    }
+                ?>
 
-            foreach ($splitIntoWords as $entry){
-                echo "<span> $entry" . " " . "</span>";
-            }
-        ?>
+            </div>  
     </body>
 </html>
