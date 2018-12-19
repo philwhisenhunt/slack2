@@ -40,7 +40,15 @@
             
                <span>
                 <p id="displayedText">
-
+                    <?php
+                    $arrayOfWords = [];
+                    print_r($arrayOfWords);
+                    if(count($arrayOfWords) > 0){
+                        foreach($arrayOfWords as $word){
+                            echo("<span>" . $word . "</span>");
+                        }
+                    }
+                    ?>
                  </p>
                 </span> 
        

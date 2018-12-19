@@ -5,15 +5,14 @@
 //reverse it
 //display
 $inputString = $_POST["chatMessage"];
+$arrayOfWords = [];
 function splitIntoWords($inputString){
 
     $arrayOfWords = explode(" ", $inputString);
-    // return $arrayOfWords;
-    // print_r($arrayOfWords);
-    $message = "yo";
-    return $message;
 
-
+    foreach($arrayOfWords as $word){
+        return "<span>" . $word . "</span>";
+    }
 }
    
 
