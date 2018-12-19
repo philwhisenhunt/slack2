@@ -8,7 +8,11 @@ $inputString = $_POST["chatMessage"];
 function splitIntoWords($inputString){
 
     $arrayOfWords = explode(" ", $inputString);
-    return $arrayOfWords;
+    // return $arrayOfWords;
+    // print_r($arrayOfWords);
+    $message = "yo";
+    return $message;
+
 
 }
    

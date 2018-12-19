@@ -1,10 +1,4 @@
-<?php 
-
-
-?>
-
-
-
+<!DOCTYPE html>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
@@ -19,7 +13,7 @@
                 $.ajax({
                     url: "paragrapher.php",
                     type: "POST",
-                    data: "chatMessage=" +theVar,
+                    data: "chatMessage=" + theVar,
 
                     success: function(response) {
                         console.log(response + " is the pasted text");
@@ -44,20 +38,13 @@
 
         <h3>Don't like what you see? Click any of the words below to remove them</h3>
             
-               
-        <p id="displayedText">
+               <span>
+                <p id="displayedText">
 
-</p>
+                 </p>
+                </span> 
        
-<?php
- 
-    if(count($arrayOfWords) > 0){
-        foreach ($arrayOfWords  as $entry){
-            echo "<span> $entry" . " " . "</span>";
-    }
-    }
-    
-?>
+
 
             </div>  
     </body>
