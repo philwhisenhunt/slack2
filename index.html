@@ -24,8 +24,10 @@
             url: "get.php",
             type: "POST",
             data: "chatMessage=" + arb,
+
             success: function(response) {
-            console.log(response + " is the variable")                            
+            console.log(response + " is the variable");
+            $("#displayedMessage").text(response);                       
             }
             
         });
@@ -33,6 +35,12 @@
         e.preventDefault();
 
     });
+
+    $(document).ready(function(){
+            $("#displayedMessage").click(function(){
+                $(this).hide();
+            });
+        });
     // document.getElementById("myText").innerHTML = response;
 
     
@@ -41,12 +49,16 @@
     
     <h3>Slack2</h3>
     <!-- <h1>"the value for number is: " <span id="myText"></span></h1> -->
+ 
 
     <input type="text" name="chatMessage" id="theMessage">
 
     <button class="submit" id="anything" >Send</button>
-                
-                
+                <h2>Your reverse message:</h2>
+    <p id="displayedMessage">
+
+    </p>
+                <h3>Don't like what you see? Just click to remove it.</h3>
     
     </body>
 </html>
