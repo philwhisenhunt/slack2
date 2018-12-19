@@ -5,11 +5,13 @@
 //reverse it
 //display
 $inputString = $_POST["chatMessage"];
-function reverseIt($inputString){
+function splitIntoWords($inputString){
 
-    return strrev($inputString);
+    $arrayOfWords = explode(" ", $inputString);
+    return $arrayOfWords;
+
 }
+   
 
- echo reverseIt($inputString);
  
  ?>
