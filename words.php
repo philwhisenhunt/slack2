@@ -20,7 +20,19 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
         <script>
 
+            $(document).on('click', "#daButton", function(e) {
+                var theVar = $('#thePastedStuff').val();
+                $.ajax({
+                    url: "get.php",
+                    type: "POST",
+                    data: "chatMessage=" +theVar,
 
+                    success: function(response) {
+                        console.log(response + " is the pasted text");
+                        $("#dis")
+                    }
+                })
+            })
 
             $(document).ready(function(){
                 $("span").click(function(){
