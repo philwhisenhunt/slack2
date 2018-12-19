@@ -21,7 +21,7 @@
         <script>
 
 
-            
+
             $(document).ready(function(){
                 $("span").click(function(){
                     $(this).hide();
@@ -30,7 +30,10 @@
     
         </script>
 
-        <h3>Click the words to remove them</h3>
+        <input type="text" name="pastedText" id="thePastedStuff">
+        <button type = "submit" id="daButton">Let's go</button>
+
+        <h3>Don't like what you see? Click any of the words below to remove them</h3>
 
         <?php
             $paragraph = "Text goes here. It can be as long as needed.";
