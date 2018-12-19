@@ -29,9 +29,12 @@
 
                     success: function(response) {
                         console.log(response + " is the pasted text");
-                        $("#displayedText").text(response);
+                        $("#displayedText").text(response);                       
+
                     }
                 });
+                e.preventDefault();
+
             });
 
             $(document).ready(function(){
@@ -47,7 +50,11 @@
 
         <h3>Don't like what you see? Click any of the words below to remove them</h3>
             
-                <p id="#displayedText"></p>
+               
+        <p id="displayedText">
+
+</p>
+       
                 <?php
                     $paragraph = "Text goes here. It can be as long as needed.";
                     $splitIntoWords = explode(" ", $paragraph);
