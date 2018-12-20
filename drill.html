@@ -15,7 +15,22 @@
 
             
 <script>
+    $(document).on('click', '#idOfButton', function(e){
+        var varName = $('#theMessage').val();
+        $.ajax({
+            url: "filenameGoesHere.php",
+            type: "POST",
+            data: "theMessage=" + varname,
 
+            success: function(response){
+                console.log(response + "is the new response");
+
+            }
+
+        });
+        e.preventDefault();
+
+    })
         
     
     </script>
