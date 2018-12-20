@@ -33,7 +33,8 @@
 
             $(document).ready(function(){
                 $("#displayedText").click(function(e){
-                    $(e.target).hide();
+                    $(e.target).fadeOut(3000);
+                    // $(e.target).hide();
                     console.log(e);
                     // $(this).hide();
                 });
