@@ -15,22 +15,21 @@
 
             
 <script>
-    $(document).on('click', '#idOfButton', function(e){
-        var varName = $('#theMessage').val();
-        $.ajax({
-            url: "filenameGoesHere.php",
+   $(document).on('click', '#nameOfThing', function(e){
+       var nameOfVariable = $("#theNameOfTheMessage").val();
+       $.ajax({
+            url: "filename.php",
             type: "POST",
-            data: "theMessage=" + varname,
-
-            success: function(response){
-                console.log(response + "is the new response");
-
+            data: "theMessage=" + nameOfVariable,
+            success: function(response) {
+                console.log(response + "is the response");
+                $('#theNameOfTheMessage').text(response);
             }
 
-        });
-        e.preventDefault();
 
-    });
+       });
+       e.preventDefault();
+   });
         
     
     </script>
