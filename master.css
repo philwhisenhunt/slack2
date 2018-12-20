@@ -1,0 +1,9 @@
+#displayedText{
+    font-size: 3em;
+    margin: 2em;
+}
+
+#thePastedStuff{
+    height: 25em;
+    width: 50em;
+}
